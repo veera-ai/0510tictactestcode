@@ -29,6 +29,44 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* New structural styles */
+.app-header {
+  padding: 16px 0 0 0;
+}
+
+.title {
+  margin: 0;
+}
+
+.app-main {
+  padding: 16px;
+}
+
+.app-footer {
+  padding: 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* New structural styles */
+.app-header {
+  padding: 16px 0 0 0;
+}
+
+.title {
+  margin: 0;
+}
+
+.app-main {
+  padding: 16px;
+}
+
+.app-footer {
+  padding: 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

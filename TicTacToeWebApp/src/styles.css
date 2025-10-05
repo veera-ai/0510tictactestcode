@@ -1,0 +1,131 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22d3ee;
+  --accent-strong: #0891b2;
+  --border: #374151;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg) 0%, #030712 100%);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 24px 16px 8px 16px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.app-main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.app-footer {
+  padding: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.game-container {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+}
+
+.status {
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.board {
+  display: grid;
+  gap: 8px;
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.square {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 2.25rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.square:hover:not(:disabled),
+.square:focus-visible:not(:disabled) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(34,211,238,0.25);
+  outline: none;
+}
+
+.square:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.square-filled {
+  background: #0a0f1a;
+}
+
+.controls {
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-reset {
+  background: var(--accent);
+  color: #062025;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out, transform 0.05s ease-in-out;
+}
+
+.btn-reset:hover {
+  background: var(--accent-strong);
+  color: white;
+}
+
+.btn-reset:active {
+  transform: translateY(1px);
+}
